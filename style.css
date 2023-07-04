@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+.analog-clock{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 50%;
+    border: 20px solid #CBB279;
+    position: relative;
+}
+.analog-clock::after{
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.analog-clock::before{
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 13px;
+    background-color:#CBB279;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+}
+.number{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+.number-1{
+    transform: rotate(30deg);
+}
+.number-2{
+    transform: rotate(60deg);
+}
+.number-3{
+    transform: rotate(90deg);
+}
+.number-4{
+    transform: rotate(120deg);
+}
+.number-5{
+    transform: rotate(150deg);
+}
+.number-6{
+    transform: rotate(360deg);
+    top: 425px;
+}
+.number-7{
+    transform: rotate(210deg);
+}
+.number-8{
+    transform: rotate(240deg);
+}
+.number-9{
+    transform: rotate(270deg);
+}
+.number-10{
+    transform: rotate(300deg);
+}
+.number-11{
+    transform: rotate(330deg);
+}
+.number-12{
+    transform: rotate(360deg);
+}
+.needle{
+    --rotation:0;
+    position: absolute;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform-origin: bottom;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%)rotate(calc(var(--rotation)*1deg));
+    z-index: 8;
+}
+.min{
+    background-color: black;
+    width: 7px;
+    height: 45%;
+}
+.sec{
+    background-color: black;
+    width: 3px;
+    height: 30%;
+}
+.hrs{
+    background-color: black;
+    width: 10px;
+    height: 30%;
+}
+.analog{
+    position: absolute;
+    font-size: 140px;
+    margin-left: 10px;
+    margin-bottom: 300px;
+}
+.clock{
+    position: absolute;
+    font-size: 140px;
+    margin-left: 10px;
+    margin-top: 280px;
+}
